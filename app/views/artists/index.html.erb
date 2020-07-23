@@ -1,0 +1,6 @@
+<h1>Aritst List</h1>
+<% @artists.each do |a| %>
+<%=link_to a.name, artist_path(a) %><br>
+<% end %>
+<br><br>
+<%= button_to "New Artist", new_artist_path, :method => "get" %>

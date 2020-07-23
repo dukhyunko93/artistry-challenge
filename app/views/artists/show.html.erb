@@ -1,0 +1,16 @@
+<h1><%= @artist.name %></h1>
+
+<strong>Title:</strong> <%= @artist.title %><br><br>
+
+<strong>Age:</strong><%= @artist.age %><br><br>
+
+<% if @artist.instruments.count > 0 %>
+    <strong>Instruments:</strong>
+        <% @artist.instruments.each do |i| %>
+        <%= i.name %>
+    <% end %><br><br>
+<% end %>
+
+<%= button_to "Assign Instrument", new_specialty_path, :method => "get" %><br>
+
+<%= button_to "Back", artists_path, :method => "get" %>

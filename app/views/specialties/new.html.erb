@@ -1,0 +1,13 @@
+<h1>Assign an Instrument to a Artist</h1>
+
+<%= form_for @specialty do |s| %>
+
+<label>Artist Name:</label>
+<%= s.collection_select :artist_id, @artists, :id, :name %><br><br>
+
+<label>Istrument:</label>
+<%= s.collection_select :instrument_id, @instruments, :id, :name %><br><br>
+
+<%=s.submit "Assign" %>
+
+<% end %>

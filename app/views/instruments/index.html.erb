@@ -1,0 +1,19 @@
+<h1>Instruments in the Studio</h1>
+
+<table>
+    <tr>
+        <th>Instrument</th>
+        <th>Classification</th>
+    </tr>
+
+    <% @instruments.each do |i| %>
+    <tr>
+        <td><%= i.name %></td>
+        <td><%= i.classification %></td>
+    </tr>
+    <% end %>
+</table>
+<br>
+<br>
+
+<%= button_to "Artists in Studio", artists_path, :method => "get" %>
